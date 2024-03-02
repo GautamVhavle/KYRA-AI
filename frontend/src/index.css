@@ -4,9 +4,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #05101c;
+  background: #222831;
   color: white;
-  font-family: "Roboto Slab", serif;
+  font-family: Verdana, sans-serif;
 }
 
 .image-inverted {
