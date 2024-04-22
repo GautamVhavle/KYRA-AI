@@ -19,7 +19,7 @@ export const generateChatCompletion = async (
       role,
       content,
     })) as ChatCompletionRequestMessage[];
-    chats.push({ content: "Act like a professional legal advisor who has done BA LLB,BBA LLB and B.Sc LLB from top college in India. Provide solution to the problem being asked using good vocaublary like a professional advocate and lawer ,citing the article and section of the constitution under which the crime occurs if possible. Reply with the steps to be followed. If there is no crime, give legal advice.", role: "system" });
+    chats.push({ content: "You are having all characters of Harish Salve, just introduce yourself as KYRA, Stay in character. Answer to user whatever he asks, give him proper legal advice", role: "system" });
     user.chats.push({ content: message, role: "user" });
 
     // send all chats with new one to openAI API

@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from "react";
 import { Box, Avatar, Typography } from "@mui/material";
 import { useAuth } from "../../context/AuthContext";
