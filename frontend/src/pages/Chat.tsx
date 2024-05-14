@@ -43,12 +43,15 @@ const Chat = () => {
       toast.error("Deleting chats failed", { id: "deletechats" });
     }
   };
+
   useLayoutEffect(() => {
+      console.log(auth?.isLoggedIn, auth.user);
     if (auth?.isLoggedIn && auth.user) {
       toast.loading("Loading Chats", { id: "loadchats" });
       getUserChats()
         .then((data) => {
           setChatMessages([...data.chats]);
+          console.log("hyy", data);
           toast.success("Successfully loaded chats", { id: "loadchats" });
         })
         .catch((err) => {
@@ -57,7 +60,9 @@ const Chat = () => {
         });
     }
   }, [auth]);
+
   useEffect(() => {
+      console.log("ggggg", auth);
     if (!auth?.user) {
       return navigate("/login");
     }
@@ -101,7 +106,7 @@ const Chat = () => {
             }}
           >
             {auth?.user?.name[0]}
-            {auth?.user?.name.split(" ")[1][0]}
+            {auth?.user?.name?.split(" ").length == 2 && (auth?.user?.name?.split(" ")[1][0])}
           </Avatar>
           <Typography sx={{ mx: "auto", fontFamily: "work sans" }}>
             You are talking to KYRA

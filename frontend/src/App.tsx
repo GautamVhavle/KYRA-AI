@@ -6,8 +6,14 @@ import Signup from "./pages/Signup";
 import Chat from "./pages/Chat";
 import NotFound from "./pages/NotFound";
 import { useAuth } from "./context/AuthContext";
+import {useEffect} from "react";
+
 function App() {
   const auth = useAuth();
+
+    useEffect(() => {
+        console.log(auth);
+    }, [auth]);
 
   return (
     <main>
